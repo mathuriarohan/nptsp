@@ -20,7 +20,7 @@ Crossover: This is a standard TSP-crossover implementation. Input is two paths a
 Now the simulated annealing algorithm will keep track of two paths, the path currently being manipulated and the best path seen by the algorithm. These paths are called path and bestPath respectively. Now begin with some temperature and some decay rate. At each iteration i, with probability equal to the temperature, choose to perform a k-op operation on the existing path. Otherwise, perform a crossover with the path and the best path seen so far. If the output paths for either of these steps violate the max 3 in a row constraint, dump the newly generated path and use the existing path. Now record if this path is the best path seen so far. Then modify the temperature by multiplying by decay rate. Repeat this process for a large number of iterations. Then return the best path seen so far.
 
 
-Numbers: We chose to use 100 million iterations, since 10 million often lead to worse paths,
+Numbers: I chose to use 100 million iterations, since 10 million often lead to worse paths,
 but 1 billion iterations did not seem to offer significant improvement over 100 million. The
 initial temperature was set to 1 to force random flailing in the beginning, and lowered over
 time to around .1 by the end.
